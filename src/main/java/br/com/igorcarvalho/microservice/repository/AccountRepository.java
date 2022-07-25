@@ -8,4 +8,6 @@ public interface AccountRepository {
     AccountEntity create(AccountEntity entity);
 
     Optional<AccountEntity> find(Long id);
+
+//    Page<AccountEntity> findPaginated(Pageable pageable);
 }

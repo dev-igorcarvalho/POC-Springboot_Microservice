@@ -6,4 +6,5 @@ public interface AccountService {
     AccountDto createNewAccount(AccountDto dto);
 
     AccountDto getAccountById(Long accountId);
+//    Page<AccountDto> findPaginated(int pageNo, int pageSize );
 }

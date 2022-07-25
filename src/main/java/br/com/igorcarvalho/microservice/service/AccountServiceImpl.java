@@ -37,4 +37,12 @@ public class AccountServiceImpl implements AccountService {
                     "Account not found"));
         return (AccountDto) mapper.toDto(entity);
     }
+
+//    @Override
+//    public Page<AccountDto> findPaginated(int pageNo, int pageSize) {
+//        Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by("...").ascending());
+//        Page<AccountEntity> pagedResult = repository.findPaginated(paging);
+//        Page<AccountDto> pagedResultDto = pagedResult.map(e -> (AccountDto) this.mapper.toDto(e));
+//        return pagedResultDto;
+//    }
 }

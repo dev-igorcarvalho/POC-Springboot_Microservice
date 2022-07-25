@@ -17,4 +17,9 @@ public interface AccountRepositoryImpl extends AccountRepository, JpaRepository<
     default Optional<AccountEntity> find(Long id) {
         return findById(id);
     }
+
+//    @Override
+//    default Page<AccountEntity> findPaginated(Pageable pageable) {
+//        return findAll(pageable);
+//    }
 }

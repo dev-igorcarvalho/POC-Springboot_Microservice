@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface AccountRepositoryImpl extends AccountRepository, JpaRepository<AccountEntity, Long> {
     @Override
-    default AccountEntity save(AccountEntity entity) {
+    default AccountEntity create(AccountEntity entity) {
         return save(entity);
     }
 

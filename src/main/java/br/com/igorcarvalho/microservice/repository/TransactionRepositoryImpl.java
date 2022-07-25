@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TransactionRepositoryImpl extends TransactionRepository, JpaRepository<TransactionEntity, Long> {
     @Override
-    default TransactionEntity save(TransactionEntity entity) {
-        return save(entity);
+    default TransactionEntity create(TransactionEntity entity) {
+        return this.save(entity);
     }
 }

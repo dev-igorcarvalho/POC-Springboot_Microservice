@@ -5,7 +5,7 @@ import br.com.igorcarvalho.microservice.model.entity.AccountEntity;
 import java.util.Optional;
 
 public interface AccountRepository {
-    AccountEntity save(AccountEntity entity);
+    AccountEntity create(AccountEntity entity);
 
     Optional<AccountEntity> find(Long id);
 }

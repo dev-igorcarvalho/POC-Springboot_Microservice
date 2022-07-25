@@ -33,5 +33,10 @@ public class TransactionEntity {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "OperationType_ID", nullable = false)
-    private OperationTypeEntity operationTypeEntity;
+    private OperationTypeEntity operationType;
+
+    @ManyToOne
+    @JoinColumn(name = "Account_ID")
+    private AccountEntity account;
+
 }

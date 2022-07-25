@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "Accounts")
@@ -30,9 +30,7 @@ public class AccountEntity {
     @Column(name = "Document_Number", nullable = false, length = 11, unique = true)
     private String documentNumber;
 
-
-    @OneToMany(cascade = CascadeType.PERSIST, orphanRemoval = true)
-    @JoinColumn(name = "Account_ID")
-    private Set<TransactionEntity> transactions;
+    @OneToMany(mappedBy = "account", orphanRemoval = true)
+    private List<TransactionEntity> transactions;
 
 }

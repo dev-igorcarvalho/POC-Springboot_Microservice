@@ -20,13 +20,13 @@ public class AccountController {
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public AccountDto create(@RequestBody @Valid AccountDto request) {
-        throw new java.lang.UnsupportedOperationException("Not implemented yet.");
+        return service.createNewAccount(request);
     }
 
     @GetMapping(("/{accountId}"))
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public AccountDto get(@PathVariable Long accountId) {
-        throw new java.lang.UnsupportedOperationException("Not implemented yet.");
+        return service.getAccountById(accountId);
     }
 }

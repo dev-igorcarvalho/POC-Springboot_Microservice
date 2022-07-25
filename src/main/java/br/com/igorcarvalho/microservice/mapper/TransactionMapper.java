@@ -2,6 +2,7 @@ package br.com.igorcarvalho.microservice.mapper;
 
 import br.com.igorcarvalho.microservice.model.dto.OperationTypeDto;
 import br.com.igorcarvalho.microservice.model.dto.TransactionDto;
+import br.com.igorcarvalho.microservice.model.entity.OperationTypeEntity;
 import br.com.igorcarvalho.microservice.model.entity.TransactionEntity;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,8 @@ public class TransactionMapper implements Mapper<TransactionEntity, TransactionD
               .id(dto.getId())
               .amount(dto.getAmount())
               .eventDate(dto.getEventDate())
-//              .operationTypeEntity()
+              .operationType(new OperationTypeEntity(dto.getOperationTypeDto().getId()
+                    , dto.getOperationTypeDto().getDescription()))
               .build();
     }
 

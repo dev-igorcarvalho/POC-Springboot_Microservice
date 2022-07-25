@@ -48,8 +48,7 @@ class AccountRepositoryImplTest {
               () -> assertNotNull(optional.get()),
               () -> assertNotNull(optional.get().getId()),
               () -> assertNotNull(optional.get().getDocumentNumber()),
-              () -> assertEquals(toBeSaved.getDocumentNumber(), optional.get().getDocumentNumber()),
-              () -> assertDoesNotThrow(() -> new Exception())
+              () -> assertEquals(toBeSaved.getDocumentNumber(), optional.get().getDocumentNumber())
         );
     }
 

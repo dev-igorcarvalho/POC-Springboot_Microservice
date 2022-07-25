@@ -10,7 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "Transactions")
+@Table(name = "OperationsTypes")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

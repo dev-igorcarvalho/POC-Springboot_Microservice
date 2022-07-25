@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NoArgsConstructor
@@ -24,5 +25,5 @@ public class AccountDto {
     @Size(min = 11, max = 11)
     private String documentNumber;
 
-    private Set<TransactionDto> transactions;
+    private List<TransactionDto> transactions = new ArrayList<>();
 }

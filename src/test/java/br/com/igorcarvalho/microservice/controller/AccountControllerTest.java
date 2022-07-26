@@ -3,7 +3,6 @@ package br.com.igorcarvalho.microservice.controller;
 import br.com.igorcarvalho.microservice.model.dto.AccountDto;
 import br.com.igorcarvalho.microservice.util.ModelGenerator;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +26,8 @@ class AccountControllerTest {
     private TestRestTemplate restTemplate;
     private ModelGenerator modelGenerator = new ModelGenerator();
 
-    @BeforeEach
-    void setUp() {
-    }
-
     @Test
-    @DisplayName("Should has a controller")
+    @DisplayName("Should have a controller")
     void controller_should_exit_when_server_is_running() {
         Assertions.assertThat(controller).isNotNull();
     }

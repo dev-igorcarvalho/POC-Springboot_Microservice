@@ -66,12 +66,23 @@ to expose a pseudo bank api.
 
 ### Prerequisites
 
-* Java SDK
+* Java 11 SDK
 * Maven
 
 ### Installation
 
-1. WIP - To be done
+1. Clone the project
+   ```sh
+   git clone https://github.com/dev-igorcarvalho/POC-Springboot_Microservice
+   ```
+2. At project root folder, give execution permission to deploy script
+    ```sh
+    sudo chmod 777 deploy.sh
+    ```
+3. Run the deploy.sh file
+    ```sh
+    ./deploy.sh
+    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage

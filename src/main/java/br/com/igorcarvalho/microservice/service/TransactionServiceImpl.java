@@ -22,7 +22,6 @@ import java.time.LocalDateTime;
 public class TransactionServiceImpl implements TransactionService {
 
     private final Mapper mapper;
-
     private final OperationTypeRepository operationTypeRepository;
     private final AccountRepository accountRepository;
     private final TransactionRepository transactionRepository;

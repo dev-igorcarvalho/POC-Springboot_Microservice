@@ -5,28 +5,22 @@ import br.com.igorcarvalho.microservice.model.entity.AccountEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
 @DisplayName("Account Mapper Tests")
 class AccountMapperTest {
 
     private AccountEntity entity;
     private AccountDto dto;
-
-    @Autowired
-    @Qualifier("accountMapper")
-    private Mapper mapper;
+    private AccountMapper mapper;
 
     @BeforeEach
     void setUp() {
+        mapper = new AccountMapper(new TransactionMapper());
         this.entity = AccountEntity.builder()
               .id(1L)
               .documentNumber("12345678900")

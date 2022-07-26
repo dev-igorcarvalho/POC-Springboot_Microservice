@@ -1,0 +1,12 @@
+
+INSERT INTO OPERATIONS_TYPES (Operation_Type_ID, Description)
+VALUES (1, 'COMPRA A VISTA');
+
+INSERT INTO OPERATIONS_TYPES (Operation_Type_ID, Description)
+VALUES (2, 'COMPRA PARCELADA');
+
+INSERT INTO OPERATIONS_TYPES (Operation_Type_ID, Description)
+VALUES (3, 'SAQUE');
+
+INSERT INTO OPERATIONS_TYPES (Operation_Type_ID, Description)
+VALUES (4, 'PAGAMENTO');

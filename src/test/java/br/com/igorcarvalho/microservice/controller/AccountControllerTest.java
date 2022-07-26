@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@DisplayName("Account controller test")
 class AccountControllerTest {
 
     private final String resourceUri = "/" + AccountController.ROUTE;
